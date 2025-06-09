@@ -26,7 +26,7 @@ FROM quay.io/wildfly/wildfly:36.0.1.Final-jdk21
 # Copia o arquivo .war gerado no estágio anterior para a pasta de deployments do WildFly
 # ❗ ATENÇÃO: O nome do arquivo .war deve ser o mesmo gerado na pasta 'target' do seu projeto.
 # O seu parece ser 'sistemaAdocao.war' pela imagem. Se for diferente, ajuste o nome abaixo.
-COPY --from=build /app/target/usuario_tarefas.war /opt/jboss/wildfly/standalone/deployments/
+COPY --from=build /app/target/usuario_tarefa.war /opt/jboss/wildfly/standalone/deployments/
 
 # A imagem base do WildFly já tem o ENTRYPOINT correto para iniciar o servidor na porta 8080.
 # O comando é: "/opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0"
