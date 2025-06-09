@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    build: . # Assumindo que o Dockerfile está na mesma pasta do docker-compose
+    container_name: crud-java-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/opt/jboss/wildfly/standalone/log
+    environment:
+      DB_HOST: db
+      DB_NAME: tarefas
+      DB_USER: postgres
+      DB_PASS: 2016010124
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: postgres:16
+    container_name: crud-postgres-db
+    environment:
+      POSTGRES_DB: tarefas
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 2016010124
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432" # Torna o banco acessível no host
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:
+
+networks:
+  app-network:
