@@ -1,11 +1,12 @@
 -- Remover tabelas existentes se elas já existirem (útil para testes e reinicialização)
+-- A ordem é importante devido às chaves estrangeiras
 DROP TABLE IF EXISTS tarefa CASCADE;
 DROP TABLE IF EXISTS usuario CASCADE;
 DROP TABLE IF EXISTS categoria CASCADE;
 
 -- Criação da tabela usuario
 CREATE TABLE usuario (
-                         id INTEGER PRIMARY KEY, -- Alterado de 'cod' para 'id'
+                         id INTEGER PRIMARY KEY, -- Chave primária: 'id'
                          nome VARCHAR(255),
                          email VARCHAR(255),
                          senha VARCHAR(255),
@@ -14,23 +15,31 @@ CREATE TABLE usuario (
 
 -- Para a tabela usuario: gerar id automaticamente
 ALTER TABLE usuario
-ALTER COLUMN id -- Alterado de 'cod' para 'id'
+ALTER COLUMN id
 ADD GENERATED ALWAYS AS IDENTITY;
+
+-- Criação da tabela categoria
+CREATE TABLE categoria (
+                           id SERIAL PRIMARY KEY, -- Chave primária: 'id' (antes era 'cod')
+                           nome VARCHAR(100) NOT NULL
+);
 
 -- Criação da tabela tarefa
 CREATE TABLE tarefa (
-                        cod INTEGER PRIMARY KEY,
+                        id INTEGER PRIMARY KEY, -- Chave primária: 'id' (antes era 'cod')
                         titulo VARCHAR(255),
                         descricao TEXT,
                         data DATE,
                         concluido BOOLEAN,
-                        idUsuario INTEGER, -- Alterado de 'codUsuario' para 'idUsuario' para consistência
-                        FOREIGN KEY (idUsuario) REFERENCES usuario(id) ON DELETE CASCADE ON UPDATE CASCADE -- Referencia 'usuario(id)'
+                        idUsuario INTEGER, -- Chave estrangeira para 'usuario(id)'
+                        idCategoria INTEGER, -- Chave estrangeira para 'categoria(id)' (antes era 'codCategoria')
+                        FOREIGN KEY (idUsuario) REFERENCES usuario(id) ON DELETE CASCADE ON UPDATE CASCADE,
+                        FOREIGN KEY (idCategoria) REFERENCES categoria(id) ON DELETE SET NULL ON UPDATE CASCADE -- Referencia 'categoria(id)'
 );
 
--- Para a tabela tarefa: gerar cod automaticamente
+-- Para a tabela tarefa: gerar id automaticamente
 ALTER TABLE tarefa
-ALTER COLUMN cod
+ALTER COLUMN id
 ADD GENERATED ALWAYS AS IDENTITY;
 
 -- Inserção de usuários
@@ -41,86 +50,49 @@ INSERT INTO usuario (nome, email, senha, ativo) VALUES
                                                     ('Daniel', 'daniel@example.com', 'senha123', TRUE),
                                                     ('Eduarda', 'eduarda@example.com', 'senha123', TRUE);
 
--- Inserção das tarefas
--- Tarefas de Alice (usuário 1) - Note que codUsuario agora é idUsuario
-INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario) VALUES
-                                                                       ('Tarefa A1', 'Descrição A1', '2025-05-01', FALSE, 1),
-                                                                       ('Tarefa A2', 'Descrição A2', '2025-05-02', TRUE, 1),
-                                                                       ('Tarefa A3', 'Descrição A3', '2025-05-03', FALSE, 1),
-                                                                       ('Tarefa A4', 'Descrição A4', '2025-05-04', FALSE, 1),
-                                                                       ('Tarefa A5', 'Descrição A5', '2025-05-05', TRUE, 1);
+-- Inserção de categorias
+INSERT INTO categoria (nome) VALUES
+                                 ('Trabalho'),
+                                 ('Pessoal'),
+                                 ('Estudo');
 
--- Tarefas de Bruno (usuário 2)
-INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario) VALUES
-                                                                       ('Tarefa B1', 'Descrição B1', '2025-05-01', TRUE, 2),
-                                                                       ('Tarefa B2', 'Descrição B2', '2025-05-02', FALSE, 2);
 
--- Tarefas de Carla (usuário 3)
-INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario) VALUES
-                                                                       ('Tarefa C1', 'Descrição C1', '2025-05-01', FALSE, 3),
-                                                                       ('Tarefa C2', 'Descrição C2', '2025-05-03', TRUE, 3),
-                                                                       ('Tarefa C3', 'Descrição C3', '2025-05-04', FALSE, 3);
+-- Inserção das tarefas (idUsuario refere-se ao id do usuário, idCategoria refere-se ao id da categoria)
+-- A ordem dos inserts de tarefas agora usa o ID gerado automaticamente.
+-- Os IDs de categoria são 1=Trabalho, 2=Pessoal, 3=Estudo com base na inserção acima.
 
--- Tarefas de Daniel (usuário 4)
-INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario) VALUES
-                                                                       ('Tarefa D1', 'Descrição D1', '2025-05-01', TRUE, 4),
-                                                                       ('Tarefa D2', 'Descrição D2', '2025-05-02', FALSE, 4),
-                                                                       ('Tarefa D3', 'Descrição D3', '2025-05-03', TRUE, 4),
-                                                                       ('Tarefa D4', 'Descrição D4', '2025-05-04', FALSE, 4),
-                                                                       ('Tarefa D5', 'Descrição D5', '2025-05-05', TRUE, 4),
-                                                                       ('Tarefa D6', 'Descrição D6', '2025-05-06', TRUE, 4),
-                                                                       ('Tarefa D7', 'Descrição D7', '2025-05-07', FALSE, 4);
+-- Tarefas de Alice (idUsuario = 1)
+INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario, idCategoria) VALUES
+                                                                                    ('Tarefa A1', 'Descrição A1', '2025-05-01', FALSE, 1, 1), -- Trabalho
+                                                                                    ('Tarefa A2', 'Descrição A2', '2025-05-02', TRUE, 1, 2),  -- Pessoal
+                                                                                    ('Tarefa A3', 'Descrição A3', '2025-05-03', FALSE, 1, 3), -- Estudo
+                                                                                    ('Tarefa A4', 'Descrição A4', '2025-05-04', FALSE, 1, 1), -- Trabalho
+                                                                                    ('Tarefa A5', 'Descrição A5', '2025-05-05', TRUE, 1, 2);  -- Pessoal
 
--- Tarefas de Eduarda (usuário 5)
-INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario) VALUES
-                                                                       ('Tarefa E1', 'Descrição E1', '2025-05-01', FALSE, 5),
-                                                                       ('Tarefa E2', 'Descrição E2', '2025-05-02', TRUE, 5),
-                                                                       ('Tarefa E3', 'Descrição E3', '2025-05-03', FALSE, 5),
-                                                                       ('Tarefa E4', 'Descrição E4', '2025-05-04', TRUE, 5);
+-- Tarefas de Bruno (idUsuario = 2)
+INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario, idCategoria) VALUES
+                                                                                    ('Tarefa B1', 'Descrição B1', '2025-05-01', TRUE, 2, 1),  -- Trabalho
+                                                                                    ('Tarefa B2', 'Descrição B2', '2025-05-02', FALSE, 2, 2); -- Pessoal
 
--- Criação da tabela categoria
-CREATE TABLE categoria (
-                           cod SERIAL PRIMARY KEY,
-                           nome VARCHAR(100) NOT NULL
-);
+-- Tarefas de Carla (idUsuario = 3)
+INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario, idCategoria) VALUES
+                                                                                    ('Tarefa C1', 'Descrição C1', '2025-05-01', FALSE, 3, 1), -- Trabalho
+                                                                                    ('Tarefa C2', 'Descrição C2', '2025-05-03', TRUE, 3, 2),  -- Pessoal
+                                                                                    ('Tarefa C3', 'Descrição C3', '2025-05-04', FALSE, 3, 3); -- Estudo
 
--- Adiciona coluna codCategoria na tabela tarefa
-ALTER TABLE tarefa
-    ADD COLUMN codCategoria INTEGER;
+-- Tarefas de Daniel (idUsuario = 4)
+INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario, idCategoria) VALUES
+                                                                                    ('Tarefa D1', 'Descrição D1', '2025-05-01', TRUE, 4, 1),  -- Trabalho
+                                                                                    ('Tarefa D2', 'Descrição D2', '2025-05-02', FALSE, 4, 2), -- Pessoal
+                                                                                    ('Tarefa D3', 'Descrição D3', '2025-05-03', TRUE, 4, 3),  -- Estudo
+                                                                                    ('Tarefa D4', 'Descrição D4', '2025-05-04', FALSE, 4, 1), -- Trabalho
+                                                                                    ('Tarefa D5', 'Descrição D5', '2025-05-05', TRUE, 4, 2),  -- Pessoal
+                                                                                    ('Tarefa D6', 'Descrição D6', '2025-05-06', TRUE, 4, 3),  -- Estudo
+                                                                                    ('Tarefa D7', 'Descrição D7', '2025-05-07', FALSE, 4, 1); -- Trabalho
 
--- Adiciona chave estrangeira para categoria
-ALTER TABLE tarefa
-    ADD CONSTRAINT fk_tarefa_categoria
-        FOREIGN KEY (codCategoria) REFERENCES categoria(cod) ON DELETE SET NULL ON UPDATE CASCADE;
-
--- Atualização das categorias das tarefas (os códigos das tarefas permanecem os mesmos)
--- Alice
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 1;  -- Tarefa A1 -> Trabalho
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 2;  -- Tarefa A2 -> Pessoal
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 3;  -- Tarefa A3 -> Estudo
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 4;  -- Tarefa A4 -> Trabalho
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 5;  -- Tarefa A5 -> Pessoal
-
--- Bruno
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 6;  -- Tarefa B1 -> Trabalho
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 7;  -- Tarefa B2 -> Pessoal
-
--- Carla
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 8;  -- Tarefa C1 -> Trabalho
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 9;  -- Tarefa C2 -> Pessoal
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 10; -- Tarefa C3 -> Estudo
-
--- Daniel
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 11; -- Tarefa D1 -> Trabalho
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 12; -- Tarefa D2 -> Pessoal
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 13; -- Tarefa D3 -> Estudo
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 14; -- Tarefa D4 -> Trabalho
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 15; -- Tarefa D5 -> Pessoal
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 16; -- Tarefa D6 -> Estudo
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 17; -- Tarefa D7 -> Trabalho
-
--- Eduarda
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 18; -- Tarefa E1 -> Trabalho
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 19; -- Tarefa E2 -> Pessoal
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 20; -- Tarefa E3 -> Estudo
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 21; -- Tarefa E4 -> Trabalho
+-- Tarefas de Eduarda (idUsuario = 5)
+INSERT INTO tarefa (titulo, descricao, data, concluido, idUsuario, idCategoria) VALUES
+                                                                                    ('Tarefa E1', 'Descrição E1', '2025-05-01', FALSE, 5, 1), -- Trabalho
+                                                                                    ('Tarefa E2', 'Descrição E2', '2025-05-02', TRUE, 5, 2),  -- Pessoal
+                                                                                    ('Tarefa E3', 'Descrição E3', '2025-05-03', FALSE, 5, 3), -- Estudo
+                                                                                    ('Tarefa E4', 'Descrição E4', '2025-05-04', TRUE, 5, 1);  -- Trabalho
