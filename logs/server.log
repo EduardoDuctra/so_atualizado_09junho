@@ -1,0 +1,651 @@
+2025-06-09 21:11:51,327 INFO  [org.jboss.modules] (main) JBoss Modules version 2.1.6.Final
+2025-06-09 21:11:51,813 INFO  [org.jboss.msc] (main) JBoss MSC version 1.5.5.Final
+2025-06-09 21:11:51,821 INFO  [org.jboss.threads] (main) JBoss Threads version 2.4.0.Final
+2025-06-09 21:11:51,920 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly 36.0.1.Final (WildFly Core 28.0.1.Final) starting
+2025-06-09 21:11:51,922 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	[Standalone] = 
+	file.encoding = UTF-8
+	file.separator = /
+	java.awt.headless = true
+	java.class.path = /opt/jboss/wildfly/jboss-modules.jar
+	java.class.version = 65.0
+	java.home = /opt/java/openjdk
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = OpenJDK Runtime Environment
+	java.runtime.version = 21.0.7+6-LTS
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 21
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Eclipse Adoptium
+	java.vendor.url = https://adoptium.net/
+	java.vendor.url.bug = https://github.com/adoptium/adoptium-support/issues
+	java.vendor.version = Temurin-21.0.7+6
+	java.version = 21.0.7
+	java.version.date = 2025-04-15
+	java.vm.compressedOopsMode = 32-bit
+	java.vm.info = mixed mode, sharing
+	java.vm.name = OpenJDK 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 21
+	java.vm.vendor = Eclipse Adoptium
+	java.vm.version = 21.0.7+6-LTS
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	jboss.bind.address = 0.0.0.0
+	jboss.home.dir = /opt/jboss/wildfly
+	jboss.host.name = cc7b871d8f93
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = cc7b871d8f93
+	jboss.qualified.host.name = cc7b871d8f93
+	jboss.server.base.dir = /opt/jboss/wildfly/standalone
+	jboss.server.config.dir = /opt/jboss/wildfly/standalone/configuration
+	jboss.server.data.dir = /opt/jboss/wildfly/standalone/data
+	jboss.server.log.dir = /opt/jboss/wildfly/standalone/log
+	jboss.server.name = cc7b871d8f93
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = /opt/jboss/wildfly/standalone/tmp
+	jdk.debug = release
+	jdk.serialFilter = maxbytes=10485760;maxdepth=128;maxarray=100000;maxrefs=300000
+	line.separator = 
+
+	logging.configuration = file:/opt/jboss/wildfly/standalone/configuration/logging.properties
+	module.path = /opt/jboss/wildfly/modules
+	native.encoding = UTF-8
+	org.jboss.boot.log.file = /opt/jboss/wildfly/standalone/log/server.log
+	org.jboss.resolver.warning = true
+	os.arch = amd64
+	os.name = Linux
+	os.version = 6.6.87.1-microsoft-standard-WSL2
+	path.separator = :
+	stderr.encoding = UTF-8
+	stdout.encoding = UTF-8
+	sun.arch.data.model = 64
+	sun.boot.library.path = /opt/java/openjdk/lib
+	sun.cpu.endian = little
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /opt/jboss/wildfly/jboss-modules.jar -mp /opt/jboss/wildfly/modules org.jboss.as.standalone -Djboss.home.dir=/opt/jboss/wildfly -Djboss.server.base.dir=/opt/jboss/wildfly/standalone -b 0.0.0.0
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	user.country = US
+	user.dir = /opt/jboss
+	user.home = /opt/jboss
+	user.language = en
+	user.name = jboss
+	user.timezone = GMT
+2025-06-09 21:11:51,923 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -D[Standalone] -Djdk.serialFilter=maxbytes=10485760;maxdepth=128;maxarray=100000;maxrefs=300000 -Xms64m -Xmx512m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Dorg.jboss.boot.log.file=/opt/jboss/wildfly/standalone/log/server.log -Dlogging.configuration=file:/opt/jboss/wildfly/standalone/configuration/logging.properties 
+2025-06-09 21:11:52,547 INFO  [org.wildfly.security] (Controller Boot Thread) ELY00001: WildFly Elytron version 2.6.4.Final
+2025-06-09 21:11:52,984 INFO  [org.jboss.as.repository] (ServerService Thread Pool -- 26) WFLYDR0001: Content added at location /opt/jboss/wildfly/standalone/data/content/c3/49f10dd9a0f83554e430849402af71ce45eabe/content
+2025-06-09 21:11:53,006 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2025-06-09 21:11:53,027 INFO  [org.xnio] (MSC service thread 1-4) XNIO version 3.8.16.Final
+2025-06-09 21:11:53,034 INFO  [org.xnio.nio] (MSC service thread 1-4) XNIO NIO Implementation Version 3.8.16.Final
+2025-06-09 21:11:53,088 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-6) WFLYSRV0027: Starting deployment of "usuario_tarefa.war" (runtime-name: "usuario_tarefa.war")
+2025-06-09 21:11:53,089 INFO  [org.wildfly.extension.elytron.oidc._private] (ServerService Thread Pool -- 53) WFLYOIDC0001: Activating WildFly Elytron OIDC Subsystem
+2025-06-09 21:11:53,092 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 44) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 2.2)
+2025-06-09 21:11:53,099 INFO  [org.jboss.remoting] (MSC service thread 1-7) JBoss Remoting version 5.0.31.Final
+2025-06-09 21:11:53,102 INFO  [org.wildfly.extension.health] (ServerService Thread Pool -- 54) WFLYHEALTH0001: Activating Base Health Subsystem
+2025-06-09 21:11:53,110 INFO  [org.wildfly.extension.microprofile.config.smallrye] (ServerService Thread Pool -- 65) WFLYCONF0001: Activating MicroProfile Config Subsystem
+2025-06-09 21:11:53,117 INFO  [org.wildfly.extension.microprofile.jwt.smallrye] (ServerService Thread Pool -- 66) WFLYJWT0001: Activating MicroProfile JWT Subsystem
+2025-06-09 21:11:53,108 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 55) WFLYCLINF0001: Activating Infinispan subsystem.
+2025-06-09 21:11:53,126 INFO  [org.jboss.as.connector] (MSC service thread 1-6) WFLYJCA0009: Starting Jakarta Connectors Subsystem (WildFly/IronJacamar 3.0.13.Final)
+2025-06-09 21:11:53,126 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+2025-06-09 21:11:53,117 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 67) WFLYNAM0001: Activating Naming Subsystem
+2025-06-09 21:11:53,125 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 74) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2025-06-09 21:11:53,119 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 56) WFLYIO001: Worker 'default' has auto-configured to 12 IO threads with 96 max task threads based on your 6 available processors
+2025-06-09 21:11:53,149 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 76) WFLYWS0002: Activating WebServices Extension
+2025-06-09 21:11:53,161 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 57) WFLYRS0016: RESTEasy version 6.2.12.Final
+2025-06-09 21:11:53,168 INFO  [org.wildfly.extension.metrics] (ServerService Thread Pool -- 64) WFLYMETRICS0001: Activating Base Metrics Subsystem
+2025-06-09 21:11:53,173 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 62) WFLYJSF0007: Activated the following Jakarta Server Faces Implementations: [main]
+2025-06-09 21:11:53,195 INFO  [org.jboss.as.naming] (MSC service thread 1-8) WFLYNAM0003: Starting Naming Service
+2025-06-09 21:11:53,196 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-6) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2025-06-09 21:11:53,223 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0003: Undertow 2.3.18.Final starting
+2025-06-09 21:11:53,261 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-3) WFLYELY00023: KeyStore file '/opt/jboss/wildfly/standalone/configuration/application.keystore' does not exist. Used blank.
+2025-06-09 21:11:53,297 INFO  [org.jboss.as.ejb3] (MSC service thread 1-6) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 24 (per class), which is derived from the number of CPUs on this host.
+2025-06-09 21:11:53,300 WARN  [org.wildfly.extension.elytron] (MSC service thread 1-3) WFLYELY01084: KeyStore /opt/jboss/wildfly/standalone/configuration/application.keystore not found, it will be auto-generated on first use with a self-signed certificate for host localhost
+2025-06-09 21:11:53,309 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 96 (per class), which is derived from thread worker pool sizing.
+2025-06-09 21:11:53,349 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0012: Started server default-server.
+2025-06-09 21:11:53,349 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 75) WFLYUT0014: Creating file handler for path '/opt/jboss/wildfly/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2025-06-09 21:11:53,354 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) Queuing requests.
+2025-06-09 21:11:53,358 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-1) WFLYUT0018: Host default-host starting
+2025-06-09 21:11:53,414 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0006: Undertow HTTP listener default listening on 0.0.0.0:8080
+2025-06-09 21:11:53,452 INFO  [org.jboss.as.ejb3] (MSC service thread 1-1) WFLYEJB0493: Jakarta Enterprise Beans subsystem suspension complete
+2025-06-09 21:11:53,496 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) WFLYDS0013: Started FileSystemDeploymentService for directory /opt/jboss/wildfly/standalone/deployments
+2025-06-09 21:11:53,505 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-6) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2025-06-09 21:11:53,514 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0006: Undertow HTTPS listener https listening on 0.0.0.0:8443
+2025-06-09 21:11:53,565 INFO  [org.jboss.ws.common.management] (MSC service thread 1-6) JBWS022052: Starting JBossWS 7.3.1.Final (Apache CXF 4.0.6) 
+2025-06-09 21:11:54,138 WARN  [org.jboss.modules.define] (MSC service thread 1-3) Failed to define class javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV in Module "deployment.usuario_tarefa.war" from Service Module Loader: java.lang.NoClassDefFoundError: Failed to link javax/servlet/jsp/jstl/tlv/PermittedTaglibsTLV (Module "deployment.usuario_tarefa.war" from Service Module Loader): javax/servlet/jsp/tagext/TagLibraryValidator
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1105)
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:352)
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:483)
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:277)
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:79)
+	at org.jboss.modules.Module.loadModuleClass(Module.java:798)
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:193)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:408)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:396)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:115)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.utils.ClassLoadingUtils.loadClass(ClassLoadingUtils.java:26)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.utils.ClassLoadingUtils.loadClass(ClassLoadingUtils.java:19)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:67)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:60)
+	at org.jboss.as.server@28.0.1.Final//org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:165)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1617)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1580)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1438)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.jsp.tagext.TagLibraryValidator from [Module "deployment.usuario_tarefa.war" from Service Module Loader]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:201)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:408)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:396)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:115)
+	... 28 more
+
+2025-06-09 21:11:54,186 WARN  [org.jboss.modules.define] (MSC service thread 1-3) Failed to define class javax.servlet.jsp.jstl.tlv.ScriptFreeTLV in Module "deployment.usuario_tarefa.war" from Service Module Loader: java.lang.NoClassDefFoundError: Failed to link javax/servlet/jsp/jstl/tlv/ScriptFreeTLV (Module "deployment.usuario_tarefa.war" from Service Module Loader): javax/servlet/jsp/tagext/TagLibraryValidator
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1105)
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:352)
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:483)
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:277)
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:79)
+	at org.jboss.modules.Module.loadModuleClass(Module.java:798)
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:193)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:408)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:396)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:115)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.utils.ClassLoadingUtils.loadClass(ClassLoadingUtils.java:26)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.utils.ClassLoadingUtils.loadClass(ClassLoadingUtils.java:19)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.processComponentConfig(InterceptorAnnotationProcessor.java:67)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.component.deployers.InterceptorAnnotationProcessor.deploy(InterceptorAnnotationProcessor.java:60)
+	at org.jboss.as.server@28.0.1.Final//org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:165)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1617)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1580)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1438)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.jsp.tagext.TagLibraryValidator from [Module "deployment.usuario_tarefa.war" from Service Module Loader]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:201)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:408)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:396)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:115)
+	... 28 more
+
+2025-06-09 21:11:54,369 WARN  [org.jboss.modules.define] (MSC service thread 1-2) Failed to define class javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV in Module "deployment.usuario_tarefa.war" from Service Module Loader: java.lang.NoClassDefFoundError: Failed to link javax/servlet/jsp/jstl/tlv/PermittedTaglibsTLV (Module "deployment.usuario_tarefa.war" from Service Module Loader): javax/servlet/jsp/tagext/TagLibraryValidator
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1105)
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:352)
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:483)
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:277)
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:79)
+	at org.jboss.modules.Module.loadModuleClass(Module.java:798)
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:193)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:408)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:396)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:115)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.utils.ClassLoadingUtils.loadClass(ClassLoadingUtils.java:26)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.component.deployers.EEModuleConfigurationProcessor.deploy(EEModuleConfigurationProcessor.java:63)
+	at org.jboss.as.server@28.0.1.Final//org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:165)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1617)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1580)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1438)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.jsp.tagext.TagLibraryValidator from [Module "deployment.usuario_tarefa.war" from Service Module Loader]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:201)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:408)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:396)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:115)
+	... 26 more
+
+2025-06-09 21:11:54,371 WARN  [org.jboss.as.ee] (MSC service thread 1-2) WFLYEE0007: Not installing optional component javax.servlet.jsp.jstl.tlv.PermittedTaglibsTLV due to an exception (enable DEBUG log level to see the cause)
+2025-06-09 21:11:54,417 WARN  [org.jboss.modules.define] (MSC service thread 1-2) Failed to define class javax.servlet.jsp.jstl.tlv.ScriptFreeTLV in Module "deployment.usuario_tarefa.war" from Service Module Loader: java.lang.NoClassDefFoundError: Failed to link javax/servlet/jsp/jstl/tlv/ScriptFreeTLV (Module "deployment.usuario_tarefa.war" from Service Module Loader): javax/servlet/jsp/tagext/TagLibraryValidator
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1027)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1105)
+	at org.jboss.modules.ModuleClassLoader.doDefineOrLoadClass(ModuleClassLoader.java:352)
+	at org.jboss.modules.ModuleClassLoader.defineClass(ModuleClassLoader.java:483)
+	at org.jboss.modules.ModuleClassLoader.loadClassLocal(ModuleClassLoader.java:277)
+	at org.jboss.modules.ModuleClassLoader$1.loadClassLocal(ModuleClassLoader.java:79)
+	at org.jboss.modules.Module.loadModuleClass(Module.java:798)
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:193)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:408)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:396)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:115)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:534)
+	at java.base/java.lang.Class.forName(Class.java:513)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.utils.ClassLoadingUtils.loadClass(ClassLoadingUtils.java:26)
+	at org.jboss.as.ee@36.0.1.Final//org.jboss.as.ee.component.deployers.EEModuleConfigurationProcessor.deploy(EEModuleConfigurationProcessor.java:63)
+	at org.jboss.as.server@28.0.1.Final//org.jboss.as.server.deployment.DeploymentUnitPhaseService.start(DeploymentUnitPhaseService.java:165)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1617)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$StartTask.execute(ServiceControllerImpl.java:1580)
+	at org.jboss.msc@1.5.5.Final//org.jboss.msc.service.ServiceControllerImpl$ControllerTask.run(ServiceControllerImpl.java:1438)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.ClassNotFoundException: javax.servlet.jsp.tagext.TagLibraryValidator from [Module "deployment.usuario_tarefa.war" from Service Module Loader]
+	at org.jboss.modules.ModuleClassLoader.findClass(ModuleClassLoader.java:201)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClassUnchecked(ConcurrentClassLoader.java:408)
+	at org.jboss.modules.ConcurrentClassLoader.performLoadClass(ConcurrentClassLoader.java:396)
+	at org.jboss.modules.ConcurrentClassLoader.loadClass(ConcurrentClassLoader.java:115)
+	... 26 more
+
+2025-06-09 21:11:54,419 WARN  [org.jboss.as.ee] (MSC service thread 1-2) WFLYEE0007: Not installing optional component javax.servlet.jsp.jstl.tlv.ScriptFreeTLV due to an exception (enable DEBUG log level to see the cause)
+2025-06-09 21:11:54,618 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-2) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.postgresql.Driver (version 42.7)
+2025-06-09 21:11:54,692 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = usuario_tarefa.war_org.postgresql.Driver_42_7
+2025-06-09 21:11:54,773 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 93) WFLYUT0021: Registered web context: '/usuario_tarefa' for server 'default-server'
+2025-06-09 21:11:54,830 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 45) WFLYSRV0010: Deployed "usuario_tarefa.war" (runtime-name : "usuario_tarefa.war")
+2025-06-09 21:11:54,881 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2025-06-09 21:11:54,888 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2025-06-09 21:11:54,888 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2025-06-09 21:11:54,890 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 36.0.1.Final (WildFly Core 28.0.1.Final) started in 3966ms - Started 718 of 925 services (328 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+2025-06-09 21:13:02,248 INFO  [stdout] (default task-2) Driver carregado!
+2025-06-09 21:13:02,249 INFO  [stdout] (default task-2) Conectando a: jdbc:postgresql://db:5432/tarefas
+2025-06-09 21:13:05,973 ERROR [stderr] (default task-2) java.sql.SQLException: Erro ao conectar ao banco de dados
+2025-06-09 21:13:05,974 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:32)
+2025-06-09 21:13:05,975 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//csi.service.DataBaseServiceUser.<init>(DataBaseServiceUser.java:17)
+2025-06-09 21:13:05,975 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//csi.controller.UserServlet.init(UserServlet.java:20)
+2025-06-09 21:13:05,976 ERROR [stderr] (default task-2) 	at jakarta.servlet.api@6.0.0//jakarta.servlet.GenericServlet.init(GenericServlet.java:178)
+2025-06-09 21:13:05,976 ERROR [stderr] (default task-2) 	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.init(HttpServlet.java:107)
+2025-06-09 21:13:05,977 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+2025-06-09 21:13:05,977 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.doIt(RunAsLifecycleInterceptor.java:70)
+2025-06-09 21:13:05,978 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.init(RunAsLifecycleInterceptor.java:76)
+2025-06-09 21:13:05,978 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:103)
+2025-06-09 21:13:05,979 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:304)
+2025-06-09 21:13:05,979 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207)
+2025-06-09 21:13:05,980 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+2025-06-09 21:13:05,980 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+2025-06-09 21:13:05,981 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+2025-06-09 21:13:05,981 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+2025-06-09 21:13:05,981 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+2025-06-09 21:13:05,982 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+2025-06-09 21:13:05,982 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+2025-06-09 21:13:05,983 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+2025-06-09 21:13:05,983 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+2025-06-09 21:13:05,984 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+2025-06-09 21:13:05,984 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+2025-06-09 21:13:05,985 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-06-09 21:13:05,985 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+2025-06-09 21:13:05,986 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+2025-06-09 21:13:05,986 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+2025-06-09 21:13:05,987 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+2025-06-09 21:13:05,987 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-06-09 21:13:05,988 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:44)
+2025-06-09 21:13:05,988 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-06-09 21:13:05,989 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:51)
+2025-06-09 21:13:05,990 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+2025-06-09 21:13:05,990 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-06-09 21:13:05,991 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+2025-06-09 21:13:05,991 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+2025-06-09 21:13:05,992 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+2025-06-09 21:13:05,993 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+2025-06-09 21:13:05,996 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+2025-06-09 21:13:05,997 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-06-09 21:13:05,998 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-06-09 21:13:05,998 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-06-09 21:13:05,999 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-06-09 21:13:06,001 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+2025-06-09 21:13:06,002 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+2025-06-09 21:13:06,002 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+2025-06-09 21:13:06,003 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+2025-06-09 21:13:06,003 ERROR [stderr] (default task-2) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+2025-06-09 21:13:06,004 ERROR [stderr] (default task-2) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+2025-06-09 21:13:06,004 ERROR [stderr] (default task-2) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+2025-06-09 21:13:06,005 ERROR [stderr] (default task-2) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+2025-06-09 21:13:06,005 ERROR [stderr] (default task-2) 	at org.jboss.xnio@3.8.16.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+2025-06-09 21:13:06,006 ERROR [stderr] (default task-2) 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-09 21:13:06,006 ERROR [stderr] (default task-2) Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+2025-06-09 21:13:06,007 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+2025-06-09 21:13:06,007 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+2025-06-09 21:13:06,008 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+2025-06-09 21:13:06,008 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.Driver.makeConnection(Driver.java:446)
+2025-06-09 21:13:06,008 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.Driver.connect(Driver.java:298)
+2025-06-09 21:13:06,009 ERROR [stderr] (default task-2) 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+2025-06-09 21:13:06,009 ERROR [stderr] (default task-2) 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+2025-06-09 21:13:06,010 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:27)
+2025-06-09 21:13:06,010 ERROR [stderr] (default task-2) 	... 51 more
+2025-06-09 21:13:06,011 ERROR [stderr] (default task-2) Caused by: java.net.UnknownHostException: db
+2025-06-09 21:13:06,011 ERROR [stderr] (default task-2) 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+2025-06-09 21:13:06,012 ERROR [stderr] (default task-2) 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+2025-06-09 21:13:06,013 ERROR [stderr] (default task-2) 	at java.base/java.net.Socket.connect(Socket.java:751)
+2025-06-09 21:13:06,013 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+2025-06-09 21:13:06,015 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.<init>(PGStream.java:98)
+2025-06-09 21:13:06,016 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+2025-06-09 21:13:06,017 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+2025-06-09 21:13:06,018 ERROR [stderr] (default task-2) 	... 58 more
+2025-06-09 21:13:06,018 INFO  [stdout] (default task-2) Erro ao conectar com o Banco de Dados
+2025-06-09 21:13:06,019 INFO  [stdout] (default task-2) Driver carregado!
+2025-06-09 21:13:06,019 INFO  [stdout] (default task-2) Conectando a: jdbc:postgresql://db:5432/tarefas
+2025-06-09 21:13:06,020 ERROR [stderr] (default task-2) java.sql.SQLException: Erro ao conectar ao banco de dados
+2025-06-09 21:13:06,021 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:32)
+2025-06-09 21:13:06,021 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//csi.service.DataBaseServiceTask.<init>(DataBaseServiceTask.java:20)
+2025-06-09 21:13:06,022 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//csi.controller.UserServlet.init(UserServlet.java:21)
+2025-06-09 21:13:06,022 ERROR [stderr] (default task-2) 	at jakarta.servlet.api@6.0.0//jakarta.servlet.GenericServlet.init(GenericServlet.java:178)
+2025-06-09 21:13:06,023 ERROR [stderr] (default task-2) 	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.init(HttpServlet.java:107)
+2025-06-09 21:13:06,023 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+2025-06-09 21:13:06,023 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.doIt(RunAsLifecycleInterceptor.java:70)
+2025-06-09 21:13:06,024 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.init(RunAsLifecycleInterceptor.java:76)
+2025-06-09 21:13:06,024 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:103)
+2025-06-09 21:13:06,025 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:304)
+2025-06-09 21:13:06,025 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207)
+2025-06-09 21:13:06,026 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+2025-06-09 21:13:06,026 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+2025-06-09 21:13:06,027 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+2025-06-09 21:13:06,027 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+2025-06-09 21:13:06,027 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+2025-06-09 21:13:06,028 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+2025-06-09 21:13:06,028 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+2025-06-09 21:13:06,028 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+2025-06-09 21:13:06,029 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+2025-06-09 21:13:06,029 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+2025-06-09 21:13:06,030 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+2025-06-09 21:13:06,030 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-06-09 21:13:06,031 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+2025-06-09 21:13:06,031 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+2025-06-09 21:13:06,032 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+2025-06-09 21:13:06,032 ERROR [stderr] (default task-2) 	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+2025-06-09 21:13:06,033 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-06-09 21:13:06,033 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:44)
+2025-06-09 21:13:06,034 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-06-09 21:13:06,034 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:51)
+2025-06-09 21:13:06,035 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+2025-06-09 21:13:06,035 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+2025-06-09 21:13:06,036 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+2025-06-09 21:13:06,036 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+2025-06-09 21:13:06,036 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+2025-06-09 21:13:06,037 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+2025-06-09 21:13:06,037 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+2025-06-09 21:13:06,037 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-06-09 21:13:06,038 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-06-09 21:13:06,038 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-06-09 21:13:06,038 ERROR [stderr] (default task-2) 	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+2025-06-09 21:13:06,039 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+2025-06-09 21:13:06,039 ERROR [stderr] (default task-2) 	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+2025-06-09 21:13:06,039 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+2025-06-09 21:13:06,040 ERROR [stderr] (default task-2) 	at io.undertow.core@2.3.18.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+2025-06-09 21:13:06,041 ERROR [stderr] (default task-2) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+2025-06-09 21:13:06,041 ERROR [stderr] (default task-2) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+2025-06-09 21:13:06,041 ERROR [stderr] (default task-2) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+2025-06-09 21:13:06,042 ERROR [stderr] (default task-2) 	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+2025-06-09 21:13:06,043 ERROR [stderr] (default task-2) 	at org.jboss.xnio@3.8.16.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+2025-06-09 21:13:06,043 ERROR [stderr] (default task-2) 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-06-09 21:13:06,043 ERROR [stderr] (default task-2) Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+2025-06-09 21:13:06,044 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+2025-06-09 21:13:06,044 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+2025-06-09 21:13:06,045 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+2025-06-09 21:13:06,045 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.Driver.makeConnection(Driver.java:446)
+2025-06-09 21:13:06,045 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.Driver.connect(Driver.java:298)
+2025-06-09 21:13:06,046 ERROR [stderr] (default task-2) 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+2025-06-09 21:13:06,046 ERROR [stderr] (default task-2) 	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+2025-06-09 21:13:06,047 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:27)
+2025-06-09 21:13:06,048 ERROR [stderr] (default task-2) 	... 51 more
+2025-06-09 21:13:06,049 ERROR [stderr] (default task-2) Caused by: java.net.UnknownHostException: db
+2025-06-09 21:13:06,049 ERROR [stderr] (default task-2) 	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+2025-06-09 21:13:06,050 ERROR [stderr] (default task-2) 	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+2025-06-09 21:13:06,050 ERROR [stderr] (default task-2) 	at java.base/java.net.Socket.connect(Socket.java:751)
+2025-06-09 21:13:06,051 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+2025-06-09 21:13:06,051 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.<init>(PGStream.java:98)
+2025-06-09 21:13:06,051 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+2025-06-09 21:13:06,052 ERROR [stderr] (default task-2) 	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+2025-06-09 21:13:06,052 ERROR [stderr] (default task-2) 	... 58 more
+2025-06-09 21:13:06,052 INFO  [stdout] (default task-2) Erro ao conectar com o Banco de Dados
+2025-06-09 21:13:06,053 INFO  [stdout] (default task-2) Action recebida no doGet: null
+2025-06-09 21:13:06,129 INFO  [stdout] (default task-2) ID do usuário recebido no MenuServlet: null
+2025-06-09 21:13:15,085 INFO  [stdout] (default task-2) Driver carregado!
+2025-06-09 21:13:15,086 INFO  [stdout] (default task-2) Conectando a: jdbc:postgresql://db:5432/tarefas
+2025-06-09 21:13:15,087 ERROR [io.undertow.request] (default task-2) UT005023: Exception handling request to /usuario_tarefa/login: jakarta.servlet.ServletException: Erro ao conectar ao banco de dados
+	at deployment.usuario_tarefa.war//csi.controller.LoginServlet.init(LoginServlet.java:28)
+	at jakarta.servlet.api@6.0.0//jakarta.servlet.GenericServlet.init(GenericServlet.java:178)
+	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.init(HttpServlet.java:107)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.doIt(RunAsLifecycleInterceptor.java:70)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.init(RunAsLifecycleInterceptor.java:76)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:103)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:304)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:44)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:51)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.16.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Erro ao conectar ao banco de dados
+	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:32)
+	at deployment.usuario_tarefa.war//csi.controller.LoginServlet.init(LoginServlet.java:26)
+	... 49 more
+Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+	at deployment.usuario_tarefa.war//org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at deployment.usuario_tarefa.war//org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at deployment.usuario_tarefa.war//org.postgresql.Driver.makeConnection(Driver.java:446)
+	at deployment.usuario_tarefa.war//org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:27)
+	... 50 more
+Caused by: java.net.UnknownHostException: db
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+	... 57 more
+
+2025-06-09 21:13:21,216 INFO  [stdout] (default task-2) Driver carregado!
+2025-06-09 21:13:21,217 INFO  [stdout] (default task-2) Conectando a: jdbc:postgresql://db:5432/tarefas
+2025-06-09 21:13:24,949 ERROR [io.undertow.request] (default task-2) UT005023: Exception handling request to /usuario_tarefa/login: jakarta.servlet.ServletException: Erro ao conectar ao banco de dados
+	at deployment.usuario_tarefa.war//csi.controller.LoginServlet.init(LoginServlet.java:28)
+	at jakarta.servlet.api@6.0.0//jakarta.servlet.GenericServlet.init(GenericServlet.java:178)
+	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.init(HttpServlet.java:107)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.doIt(RunAsLifecycleInterceptor.java:70)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.init(RunAsLifecycleInterceptor.java:76)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:103)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:304)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:44)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:51)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.16.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Erro ao conectar ao banco de dados
+	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:32)
+	at deployment.usuario_tarefa.war//csi.controller.LoginServlet.init(LoginServlet.java:26)
+	... 49 more
+Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+	at deployment.usuario_tarefa.war//org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at deployment.usuario_tarefa.war//org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at deployment.usuario_tarefa.war//org.postgresql.Driver.makeConnection(Driver.java:446)
+	at deployment.usuario_tarefa.war//org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:27)
+	... 50 more
+Caused by: java.net.UnknownHostException: db
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+	... 57 more
+
+2025-06-09 21:14:08,796 INFO  [stdout] (default task-2) Driver carregado!
+2025-06-09 21:14:08,796 INFO  [stdout] (default task-2) Conectando a: jdbc:postgresql://db:5432/tarefas
+2025-06-09 21:14:12,510 ERROR [io.undertow.request] (default task-2) UT005023: Exception handling request to /usuario_tarefa/login: jakarta.servlet.ServletException: Erro ao conectar ao banco de dados
+	at deployment.usuario_tarefa.war//csi.controller.LoginServlet.init(LoginServlet.java:28)
+	at jakarta.servlet.api@6.0.0//jakarta.servlet.GenericServlet.init(GenericServlet.java:178)
+	at jakarta.servlet.api@6.0.0//jakarta.servlet.http.HttpServlet.init(HttpServlet.java:107)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:117)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.doIt(RunAsLifecycleInterceptor.java:70)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.RunAsLifecycleInterceptor.init(RunAsLifecycleInterceptor.java:76)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.LifecyleInterceptorInvocation.proceed(LifecyleInterceptorInvocation.java:103)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet$DefaultInstanceStrategy.start(ManagedServlet.java:304)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ManagedServlet.forceInit(ManagedServlet.java:207)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain.forceInit(ServletChain.java:130)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:63)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.lambda$handleRequest$1(ElytronRunAsHandler.java:68)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.FlexibleIdentityAssociation.runAsFunctionEx(FlexibleIdentityAssociation.java:103)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAsFunctionEx(Scoped.java:161)
+	at org.wildfly.security.elytron-base@2.6.4.Final//org.wildfly.security.auth.server.Scoped.runAs(Scoped.java:73)
+	at org.wildfly.security.elytron-web.undertow-server@4.1.2.Final//org.wildfly.elytron.web.undertow.server.ElytronRunAsHandler.handleRequest(ElytronRunAsHandler.java:67)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:117)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.core@2.3.18.Final//io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at org.wildfly.security.elytron-web.undertow-server-servlet@4.1.2.Final//org.wildfly.elytron.web.undertow.server.servlet.CleanUpHandler.handleRequest(CleanUpHandler.java:38)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.security.jacc.JACCContextIdHandler.handleRequest(JACCContextIdHandler.java:44)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.GlobalRequestControllerHandler.handleRequest(GlobalRequestControllerHandler.java:51)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.SendErrorPageHandler.handleRequest(SendErrorPageHandler.java:52)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:276)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:132)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at org.wildfly.extension.undertow@36.0.1.Final//org.wildfly.extension.undertow.deployment.UndertowDeploymentInfoService$UndertowThreadSetupAction.lambda$create$0(UndertowDeploymentInfoService.java:1421)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:256)
+	at io.undertow.servlet@2.3.18.Final//io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:101)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.Connectors.executeRootHandler(Connectors.java:395)
+	at io.undertow.core@2.3.18.Final//io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:861)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.ContextClassLoaderSavingRunnable.run(ContextClassLoaderSavingRunnable.java:35)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor.safeRun(EnhancedQueueExecutor.java:1990)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.doRunTask(EnhancedQueueExecutor.java:1486)
+	at org.jboss.threads@2.4.0.Final//org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1377)
+	at org.jboss.xnio@3.8.16.Final//org.xnio.XnioWorker$WorkerThreadFactory$1$1.run(XnioWorker.java:1282)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.sql.SQLException: Erro ao conectar ao banco de dados
+	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:32)
+	at deployment.usuario_tarefa.war//csi.controller.LoginServlet.init(LoginServlet.java:26)
+	... 49 more
+Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
+	at deployment.usuario_tarefa.war//org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at deployment.usuario_tarefa.war//org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at deployment.usuario_tarefa.war//org.postgresql.Driver.makeConnection(Driver.java:446)
+	at deployment.usuario_tarefa.war//org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at deployment.usuario_tarefa.war//csi.util.ConnectionFactory.getConnection(ConnectionFactory.java:27)
+	... 50 more
+Caused by: java.net.UnknownHostException: db
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at deployment.usuario_tarefa.war//org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:136)
+	at deployment.usuario_tarefa.war//org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
+	... 57 more
+

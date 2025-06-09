@@ -7,6 +7,11 @@ CREATE TABLE usuario (
                          ativo BOOLEAN
 );
 
+-- Para a tabela usuario: gerar cod automaticamente
+ALTER TABLE usuario
+ALTER COLUMN cod
+ADD GENERATED ALWAYS AS IDENTITY;
+
 -- Criação da tabela tarefa
 CREATE TABLE tarefa (
                         cod INTEGER PRIMARY KEY,
@@ -18,17 +23,12 @@ CREATE TABLE tarefa (
                         FOREIGN KEY (codUsuario) REFERENCES usuario(cod) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
--- Para a tabela usuario
-ALTER TABLE usuario
-ALTER COLUMN cod
-ADD GENERATED ALWAYS AS IDENTITY;
-
--- Para a tabela tarefa
+-- Para a tabela tarefa: gerar cod automaticamente
 ALTER TABLE tarefa
 ALTER COLUMN cod
 ADD GENERATED ALWAYS AS IDENTITY;
 
-
+-- Inserção de usuários
 INSERT INTO usuario (nome, email, senha, ativo) VALUES
                                                     ('Alice', 'alice@example.com', 'senha123', TRUE),
                                                     ('Bruno', 'bruno@example.com', 'senha123', TRUE),
@@ -36,6 +36,7 @@ INSERT INTO usuario (nome, email, senha, ativo) VALUES
                                                     ('Daniel', 'daniel@example.com', 'senha123', TRUE),
                                                     ('Eduarda', 'eduarda@example.com', 'senha123', TRUE);
 
+-- Inserção das tarefas
 -- Tarefas de Alice (usuário 1)
 INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario) VALUES
                                                                         ('Tarefa A1', 'Descrição A1', '2025-05-01', FALSE, 1),
@@ -72,60 +73,55 @@ INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario) VALUES
                                                                         ('Tarefa E3', 'Descrição E3', '2025-05-03', FALSE, 5),
                                                                         ('Tarefa E4', 'Descrição E4', '2025-05-04', TRUE, 5);
 
-
-select * from usuario
-select * from tarefa
-
+-- Criação da tabela categoria
 CREATE TABLE categoria (
                            cod SERIAL PRIMARY KEY,
                            nome VARCHAR(100) NOT NULL
 );
 
+-- Adiciona coluna codCategoria na tabela tarefa
 ALTER TABLE tarefa
-    ADD COLUMN codCategoria INTEGER,
-ADD FOREIGN KEY (codCategoria) REFERENCES categoria(cod) ON DELETE SET NULL ON UPDATE CASCADE;
+    ADD COLUMN codCategoria INTEGER;
 
+-- Adiciona chave estrangeira para categoria
+ALTER TABLE tarefa
+    ADD CONSTRAINT fk_tarefa_categoria
+        FOREIGN KEY (codCategoria) REFERENCES categoria(cod) ON DELETE SET NULL ON UPDATE CASCADE;
+
+-- Inserção de categorias
 INSERT INTO categoria (nome) VALUES
                                  ('Trabalho'),
                                  ('Pessoal'),
                                  ('Estudo');
 
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 1;  -- Tarefa A1 -> categoria "Trabalho"
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 2;  -- Tarefa A2 -> categoria "Pessoal"
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 3;  -- Tarefa A3 -> categoria "Estudo"
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 4;  -- Tarefa A4 -> categoria "Trabalho"
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 5;  -- Tarefa A5 -> categoria "Pessoal"
+-- Atualização das categorias das tarefas
+-- Alice
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 1;  -- Tarefa A1 -> Trabalho
+UPDATE tarefa SET codCategoria = 2 WHERE cod = 2;  -- Tarefa A2 -> Pessoal
+UPDATE tarefa SET codCategoria = 3 WHERE cod = 3;  -- Tarefa A3 -> Estudo
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 4;  -- Tarefa A4 -> Trabalho
+UPDATE tarefa SET codCategoria = 2 WHERE cod = 5;  -- Tarefa A5 -> Pessoal
 
--- Atualizando tarefas de Bruno (usuário 2)
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 6;  -- Tarefa B1 -> categoria "Trabalho"
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 7;  -- Tarefa B2 -> categoria "Pessoal"
+-- Bruno
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 6;  -- Tarefa B1 -> Trabalho
+UPDATE tarefa SET codCategoria = 2 WHERE cod = 7;  -- Tarefa B2 -> Pessoal
 
--- Atualizando tarefas de Carla (usuário 3)
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 8;  -- Tarefa C1 -> categoria "Trabalho"
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 9;  -- Tarefa C2 -> categoria "Pessoal"
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 10; -- Tarefa C3 -> categoria "Estudo"
+-- Carla
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 8;  -- Tarefa C1 -> Trabalho
+UPDATE tarefa SET codCategoria = 2 WHERE cod = 9;  -- Tarefa C2 -> Pessoal
+UPDATE tarefa SET codCategoria = 3 WHERE cod = 10; -- Tarefa C3 -> Estudo
 
--- Atualizando tarefas de Daniel (usuário 4)
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 11; -- Tarefa D1 -> categoria "Trabalho"
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 12; -- Tarefa D2 -> categoria "Pessoal"
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 13; -- Tarefa D3 -> categoria "Estudo"
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 14; -- Tarefa D4 -> categoria "Trabalho"
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 15; -- Tarefa D5 -> categoria "Pessoal"
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 16; -- Tarefa D6 -> categoria "Estudo"
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 17; -- Tarefa D7 -> categoria "Trabalho"
+-- Daniel
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 11; -- Tarefa D1 -> Trabalho
+UPDATE tarefa SET codCategoria = 2 WHERE cod = 12; -- Tarefa D2 -> Pessoal
+UPDATE tarefa SET codCategoria = 3 WHERE cod = 13; -- Tarefa D3 -> Estudo
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 14; -- Tarefa D4 -> Trabalho
+UPDATE tarefa SET codCategoria = 2 WHERE cod = 15; -- Tarefa D5 -> Pessoal
+UPDATE tarefa SET codCategoria = 3 WHERE cod = 16; -- Tarefa D6 -> Estudo
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 17; -- Tarefa D7 -> Trabalho
 
--- Atualizando tarefas de Eduarda (usuário 5)
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 18; -- Tarefa E1 -> categoria "Trabalho"
-UPDATE tarefa SET codCategoria = 2 WHERE cod = 19; -- Tarefa E2 -> categoria "Pessoal"
-UPDATE tarefa SET codCategoria = 3 WHERE cod = 20; -- Tarefa E3 -> categoria "Estudo"
-UPDATE tarefa SET codCategoria = 1 WHERE cod = 21; -- Tarefa E4 -> categoria "Trabalho"
-
-
-ALTER TABLE tarefa
-DROP COLUMN data;
-
-ALTER TABLE categoria RENAME COLUMN cod TO id;
-
-select * from tarefa
-select * from usuario
-select * from categoria
+-- Eduarda
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 18; -- Tarefa E1 -> Trabalho
+UPDATE tarefa SET codCategoria = 2 WHERE cod = 19; -- Tarefa E2 -> Pessoal
+UPDATE tarefa SET codCategoria = 3 WHERE cod = 20; -- Tarefa E3 -> Estudo
+UPDATE tarefa SET codCategoria = 1 WHERE cod = 21; -- Tarefa E4 -> Trabalho
