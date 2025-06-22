@@ -44,22 +44,17 @@ INSERT INTO categoria (nome) VALUES
                                  ('Trabalho'),
                                  ('Pessoal'),
                                  ('Estudo'),
-                                 ('Saúde'),
-                                 ('Finanças');
 
--- Inserção de tarefas (exemplos iniciais, associando a usuários e categorias)
--- Alice (id=1)
+
+
 INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario, codCategoria) VALUES
                                                                                       ('Comprar pão', 'Pegar pão francês na padaria', '2025-06-10', FALSE, 1, 2), -- Pessoal
                                                                                       ('Reunião de equipe', 'Reunião mensal para alinhamento de projetos', '2025-06-11', FALSE, 1, 1), -- Trabalho
                                                                                       ('Estudar para prova', 'Revisar matéria de SO', '2025-06-15', FALSE, 1, 3); -- Estudo
 
--- Bruno (id=2)
-INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario, codCategoria) VALUES
-                                                                                      ('Pagar contas', 'Boletos de água e luz', '2025-06-12', FALSE, 2, 5), -- Finanças
-                                                                                      ('Academia', 'Treino de pernas', '2025-06-10', TRUE, 2, 4); -- Saúde
 
--- Carla (id=3)
+INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario, codCategoria) VALUES
+
 INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario, codCategoria) VALUES
                                                                                       ('Fazer compras', 'Lista de supermercado', '2025-06-13', FALSE, 3, 2), -- Pessoal
                                                                                       ('Apresentação projeto', 'Slide final do projeto X', '2025-06-14', FALSE, 3, 1); -- Trabalho
@@ -67,9 +62,6 @@ INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario, codCategoria
 -- Daniel (id=4)
 INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario, codCategoria) VALUES
                                                                                       ('Ler livro', 'Capítulo 5 de "Clean Code"', '2025-06-12', FALSE, 4, 3), -- Estudo
-                                                                                      ('Consulta médica', 'Check-up anual', '2025-06-16', FALSE, 4, 4); -- Saúde
 
--- Eduarda (id=5)
 INSERT INTO tarefa (titulo, descricao, data, concluido, codUsuario, codCategoria) VALUES
                                                                                       ('Organizar arquivos', 'Limpar desktop', '2025-06-09', TRUE, 5, 2), -- Pessoal
-                                                                                      ('Preparar relatório', 'Relatório de vendas do mês', '2025-06-10', FALSE, 5, 1); -- Trabalho

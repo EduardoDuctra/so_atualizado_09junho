@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   app:
-    build: . # Assumindo que o Dockerfile está na mesma pasta do docker-compose
-    container_name: crud-java-app
+    build: .
+    container_name: java-app
     ports:
       - "8080:8080"
     volumes:
@@ -20,7 +20,7 @@ services:
 
   db:
     image: postgres:16
-    container_name: crud-postgres-db
+    container_name: postgres-db
     environment:
       POSTGRES_DB: tarefas
       POSTGRES_USER: postgres
@@ -29,7 +29,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - "5432:5432" # Torna o banco acessível no host
+      - "5432:5432"
     networks:
       - app-network
 
