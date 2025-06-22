@@ -10,11 +10,7 @@
 
 <body>
 <div class="container">
-    <img
-            class="background-image"
-            src="${pageContext.request.contextPath}/assets/Mobile login-amico.svg"
-            alt="Imagem de fundo"
-    />
+
 
     <div class="title_page">
         <h2>Login</h2>
