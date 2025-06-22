@@ -43,7 +43,7 @@ INSERT INTO usuario (nome, email, senha, ativo) VALUES
 INSERT INTO categoria (nome) VALUES
                                  ('Trabalho'),
                                  ('Pessoal'),
-                                 ('Estudo'),
+                                 ('Estudo');
 
 
 
