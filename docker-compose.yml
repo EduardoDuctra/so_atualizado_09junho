@@ -3,16 +3,16 @@ version: '3.8'
 services:
   app:
     build: .
-    container_name: java-app
+    container_name: tarefa-docker
     ports:
       - "8080:8080"
     volumes:
       - ./logs:/opt/jboss/wildfly/standalone/log
-    environment:
-      DB_HOST: db
-      DB_NAME: tarefas
-      DB_USER: postgres
-      DB_PASS: 2016010124
+#    environment:
+#      DB_HOST: db
+#      DB_NAME: tarefas
+#      DB_USER: postgres
+#      DB_PASS: 2016010124
     depends_on:
       - db
     networks:
@@ -21,10 +21,10 @@ services:
   db:
     image: postgres:16
     container_name: postgres-db
-    environment:
-      POSTGRES_DB: tarefas
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 2016010124
+#    environment:
+#      POSTGRES_DB: tarefas
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: 2016010124
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
