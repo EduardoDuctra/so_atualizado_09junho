@@ -9,10 +9,10 @@ services:
     volumes:
       - ./logs:/opt/jboss/wildfly/standalone/log
     environment:
-      DB_HOST: db
-      DB_NAME: tarefas
-      DB_USER: postgres
-      DB_PASS: 2016010124
+      HOST: db
+      NAME: tarefas
+      USER: postgres
+      PASS: 2016010124
     depends_on:
       - db
     networks:

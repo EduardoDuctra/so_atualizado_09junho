@@ -12,11 +12,11 @@ public class ConnectionFactory {
             System.out.println("Driver carregado!");
 
 
-            String dbHost = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
-            String dbPort = System.getenv("DB_PORT") != null ? System.getenv("DB_PORT") : "5432";
-            String dbName = System.getenv("DB_NAME") != null ? System.getenv("DB_NAME") : "tarefas";
-            String dbUser = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : "postgres";
-            String dbPass = System.getenv("DB_PASS") != null ? System.getenv("DB_PASS") : "2016010124";
+            String dbHost = System.getenv("HOST") != null ? System.getenv("HOST") : "localhost";
+            String dbPort = System.getenv("PORT") != null ? System.getenv("PORT") : "5432";
+            String dbName = System.getenv("NAME") != null ? System.getenv("NAME") : "tarefas";
+            String dbUser = System.getenv("USER") != null ? System.getenv("USER") : "postgres";
+            String dbPass = System.getenv("PASS") != null ? System.getenv("PASS") : "2016010124";
 
 
             String url = "jdbc:postgresql://" + dbHost + ":" + dbPort + "/" + dbName;
