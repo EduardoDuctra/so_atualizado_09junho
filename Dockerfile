@@ -1,7 +1,7 @@
 
 FROM maven:3.9-eclipse-temurin-21 AS build
 
-WORKDIR /app
+WORKDIR /usuario-tarefa
 
 RUN git clone https://github.com/EduardoDuctra/so_atualizado_09junho.git .
 
