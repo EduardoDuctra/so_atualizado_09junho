@@ -11,3 +11,6 @@ FROM quay.io/wildfly/wildfly:36.0.1.Final-jdk21
 
 COPY --from=build /usuario-tarefa/target/usuario_tarefa.war /opt/jboss/wildfly/standalone/deployments/
 
+EXPOSE 8080
+
+
